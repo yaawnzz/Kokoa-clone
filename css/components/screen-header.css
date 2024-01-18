@@ -1,0 +1,39 @@
+.screen-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 25px 25px;
+    margin-bottom: 15px;
+}
+.screen-header__title {
+    font-size: 32px;
+    font-weight: 600;
+}
+.screen-header__icons span {
+    margin-left: 25px;
+}
+.screen-header__icons span:last-child i {
+    position: relative;
+}
+.screen-header__icons span:last-child::after {
+    content: '';
+    background-color: #FF6129;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: 51px;
+    right: 16px;
+}
+@keyframes rotateGear {
+    from {
+        transform: none;
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+.screen-header__icons .fa-gear:hover {
+    position: relative;
+    animation: rotateGear 2s linear infinite;
+}
